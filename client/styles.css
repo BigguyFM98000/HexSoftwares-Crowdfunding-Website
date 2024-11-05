@@ -1,0 +1,198 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  header {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin-bottom: 10px;
+  }
+  
+  header nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  header nav a:hover {
+    text-decoration: underline;
+  }
+  
+  main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  /* Project Listing Styles */
+  #project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .project {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #4CAF50;
+  }
+  
+  .project p {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+  .project a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+    background-color: #4CAF50;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .project a:hover {
+    background-color: #45a049;
+  }
+  
+  /* Project Detail Page Styles */
+  #project-title {
+    font-size: 2em;
+    color: #4CAF50;
+    margin-bottom: 10px;
+  }
+  
+  #project-description {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  #project-goal,
+  #project-funding {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Form Styles */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Contribution Form Styles */
+  #contribution-form {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #contribution-form label {
+    margin-top: 10px;
+  }
+  
+  #contribution-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  #contribution-form button {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  /* Borrowing History */
+  .history ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .history ul li {
+    padding: 10px;
+    background-color: #e7f5e6;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #project-list {
+      grid-template-columns: 1fr;
+    }
+  
+    header nav {
+      flex-direction: column;
+    }
+  
+    form input,
+    form button {
+      width: 100%;
+    }
+  }
+  
