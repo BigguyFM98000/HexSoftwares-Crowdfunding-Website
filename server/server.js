@@ -1,13 +1,19 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const stripe = require("stripe")("your_stripe_secret_key");
+const stripe = require("stripe")("sk_test_26PHem9AhJZvU623DfE1x4sd");
 
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-mongoose.connect("mongodb://localhost:27017/crowdfundingDB", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://crowdfunding:password12345@webmobileapplication.jx4opz3.mongodb.net/crowdfundingDB?retryWrites=true&w=majority&appName=WebMobileApplication', {
+  useNewUrlParser: true,
+}).then(() => {
+  console.log('Connected to MongoDB instance');
+}).catch((err) => {
+  console.log(err.message);
+});
 
 const projectSchema = new mongoose.Schema({
   title: String,
@@ -31,7 +37,7 @@ app.post("/contribute", async (req, res) => {
     // Handle Stripe payment
     const paymentIntent = await stripe.paymentIntents.create({
       amount: amount * 100, // Convert dollars to cents
-      currency: "usd",
+      currency: "zar",
     });
 
     // Update project funding in MongoDB
